@@ -1,0 +1,195 @@
+@media only screen and (min-width: 481px) and (max-width: 960px){
+    /*TABLETS*/
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    /*TABLETS*/
+}
+
+body {
+    background-color:#333333;
+    font-family: arial, sans-serif;
+    color: #71716F;
+}
+
+#header {
+	width: 900px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+#nav {
+	width: 900px;
+	font-size: 12px;
+	color: #ffffff;
+	text-align: left;
+	margin: 0 auto;
+}
+
+#nav a {
+	text-decoration: none;
+	color: #ffffff;
+	padding-right: 25px;
+}
+
+#mainWrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+#rightWrap {
+	width: 780px;
+	padding-left:20px;
+	border: solid 1px;
+	float: left;
+}
+
+#leftWrap {
+	width: 190px;
+	border: solid 1px;
+	float: left;
+}
+
+/*LEFT MENU*/
+.leftMenu {
+	border: none;
+    width: 97%;
+    height: 280px;
+}
+.leftmenu p {
+    background-color: #6699FF;
+    font: Arial;
+    font-family: sans-serif;
+    color: #333333;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 16px;
+    width: 97%;
+    margin-bottom: 8px;
+    margin-left: 0px;
+    text-decoration: none;
+}
+.leftmenu p:hover {
+    background-color: #ffffff;
+}
+.leftmenu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: normal;
+}
+.leftmenu a:hover {
+    text-decoration: none;
+    font-weight: normal;   
+}
+.leftmenu a:visited {
+    color: #333333;    
+}
+
+#index {
+	width: 770px;
+	/* height: 265px; */
+	margin: 0 auto;
+	border: solid 1px;
+}
+
+.indexL {
+	 /* max-width: 470px; */
+    max-width: 61.03%;
+    height: auto;
+	float: left;
+	margin-top: 15px;
+	border-radius: 7px;
+}
+
+.indexR {
+	/* max-width: 270px; */
+    max-width: 35.06%; 
+    height: auto;
+	float: right;
+	margin-top: 15px;
+	border-radius: 7px;
+}
+
+.content {
+	background-color: #ffffff;
+	border-radius: 7px;
+	padding: 5px;
+	padding-top: 0px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+/*BUTTON STYLES*/
+.button p {
+    background-color: #6699FF;
+    font-family: helvetica, arial, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 7px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    float:left;
+}
+
+.button p:hover {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.button a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.button a:visited {
+    color: #333333;
+}
+
+.rbutton p {
+    background-color: #FF6666;
+    font-family: helvetica, arial, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 14px;
+    float:left;
+}
+
+.rbutton p:hover {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.rbutton a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.rbutton a:visited {
+    color: #333333;
+}
+
+.paypal_btn {
+    text-decoration: none;
+    background-color: #6699FF;
+    font-family: helvetica, arial, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    padding: 7px;
+}
+
+.paypal_btn:hover {
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #333333;
+    border: none;
+    padding: 7px;
+}
