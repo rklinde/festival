@@ -42,7 +42,7 @@
 
 	<div id="leftWrap">
 		<div class="leftmenu">
-			<a href="index1.html"><p class="leftmenu">FESTIVAL</p></a>
+			<!--<a href="index1.html"><p class="leftmenu">FESTIVAL</p></a>
 			<a href="leftmenu.html"><p class="leftmenu">TICKETS</p></a>
 			<a href="workshop.html"><p class="leftmenu">FILM CAMPS</p></a>
 			<a href="membership.html"><p class="leftmenu">MEMBERSHIP</p></a>
@@ -50,8 +50,9 @@
 			<a href="jury.html"><p class="leftmenu">JURY</p></a>
 			<a href="submit.html"><p class="leftmenu">SUBMIT</p></a>
 			<a href="support.html"><p class="leftmenu">SUPPORT</p></a>
-			<!--<a href="http://gkids.com/benefit"><p class="leftmenu">BENEFIT</p></a>-->
-			<a href="about.html"><p class="leftmenu">ABOUT</p></a>
+			<a href="http://gkids.com/benefit"><p class="leftmenu">BENEFIT</p></a>
+			<a href="about.html"><p class="leftmenu">ABOUT</p></a>-->
+			<?php include('leftmenu.html') ?>
 		</div>
 		<div class="content">
 			<!-- EMAIL SIGNUP //-->
@@ -81,10 +82,16 @@
 	<!--HOMEPAGE -->
 		<div id="index">
 			<div class="indexL">
-				<a href="http://gkids.com/submit"><img src="https://s3.amazonaws.com/nyicff_web2014/submit_index1.png" style="border-radius:7px;" /></a>
+				<?php if($section = "home"){
+				php include([img src="https://s3.amazonaws.com/nyicff_web2014/submit_index1.png" style="border-radius:7px;"]); 
+				elseif ($section = "sponsorship" || "about" || "submit") {
+					# code...
+				}
+				?>
+				<img src="https://s3.amazonaws.com/nyicff_web2014/submit_index1.png" style="border-radius:7px;" />
 			</div>
 			<div class="indexR">
-				<a href="http://gkids.com/membership"><img src="https://s3.amazonaws.com/nyicff_web2014/member_right.png" style="border-radius:7px;" /></a>
+				<img src="https://s3.amazonaws.com/nyicff_web2014/member_right.png" style="border-radius:7px;" />
 			</div>
 		</div>
 		<div class="clear"></div>
