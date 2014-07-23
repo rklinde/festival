@@ -1,0 +1,209 @@
+<?php
+	if (isset($_GET["section"])) {
+		$section = $_GET["section"];
+	} else {
+		$section = "home";	
+	}
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+	<!-- SPECIAL HEADERS //-->
+		<?php
+		if ($section=="home") 
+		{
+			include ("homepage_head.php");
+		}
+		?>
+	<!-- END SPECIAL HEADERS //-->
+
+		<title>
+			<?php
+			$title;
+			if ($section=="donate") {
+				echo "NYICFF - Donate";
+			} elseif ($section=="jury") {
+				echo "NYICFF - Jury";
+			} elseif ($section=="sponsors") {
+				echo "NYICFF - Sponsors";
+			} elseif ($section=="workshop") {
+				echo "NYICFF - Workshops";
+			} elseif ($section=="submit") {
+				echo "NYICFF - Submit";
+			} elseif ($section=="about") {
+				echo "NYICFF - About";
+			} elseif ($section=="hotels") {
+				echo "NYICFF - Hotels";
+			} elseif ($section=="getinvolved") {
+				echo "NYICFF - Get Involved";
+			} elseif ($section=="benefit") {
+				echo "NYICFF - Benefit";
+			} elseif ($section=="familyguides") {
+				echo "NYICFF - Family Guides";
+			} elseif ($section=="savethedate") {
+				echo "NYICFF - Save The Date!";
+			} elseif ($section=="teaser") {
+				echo "NYICFF - Teaser Trailer";
+			} elseif ($section=="support") {
+				echo "NYICFF - Support";
+			} elseif ($section=="buytickets") {
+				echo "NYICFF - Now On Sale";
+			} else {
+				echo "New York Int'l Children's Film Festival";
+			}
+			?>
+		</title>
+
+	<!-- ANALYTICS //-->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-30420658-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	<!-- END ANALYTICS //-->
+
+        <link rel="STYLESHEET" type="text/css" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon"  href="https://s3.amazonaws.com/nyicff_images/hopicon.ico">
+    </head>
+    <body>
+            
+		<div id="container">
+	<!-- HEADER //-->
+		<div id="header"><center><a href="http://www.gkids.com/"><img src="https://s3.amazonaws.com/nyicff_images/logo_long.png" width="900" height="99" border="0"></a><br></center>
+			<?php include("topmenu.php"); ?>
+		<br>
+		</div>
+	<!-- END HEADER //-->
+
+<!-- LEFT COLUMN //-->
+
+        <div id="leftCol">
+
+			<!-- LEFT MENU //-->
+			<?php include("leftmenu.html"); ?>
+			<!-- END LEFT MENU //-->
+
+		<div id="leftbox" style="float:left; margin-left:0px; margin-right:10px; vertical-align:top;">
+		<div class="contentWrapper" style="margin-top:0px;">
+		
+		<!-- LEFT BOX //-->
+		<div class="contentBox" style="background-color:#ffffff; width:175px; height:135px; border-radius: 7px; padding: 5px;">
+
+			<!--BOX CONTENT //-->
+			<?php include("leftbox.php"); ?>
+			<!--END BOX CONTENT //-->
+
+		</div>
+		<!-- END LEFT BOX //-->
+		</div>
+
+</div>
+		
+		  </div>
+
+	<!-- END LEFT COLUMN //-->
+
+    <!-- full width column //-->    
+		<div id="rightCol" style="width:754px;">
+		<?php if ($section != "submit" && $section != "about" && $section != "sponsors") { ?>
+		<div id="indexSplash" style="width:740px; clear:both; margin-right: 12px; margin-bottom:10px;">
+		<div class="contentWrapper" style="border-radius: 7px; background-color:<?php if ($section != "home" && $section != "comingsoon") { ?>#ffffff<?php } else if ($section == "home") { ?>#333333<?php } else { ?>#c5c6fc<?php } ?>;">
+		<div class="contentBox"> 
+			<?php if ($section == "home") { ?>
+	<table>
+		<tr>
+		<td width="490" style="vertical-align:top; padding-bottom: 10px; border-radius:5px;"> 
+						
+<!-- Change Image URL for Index Splash here -->
+<a href="http://gkids.com/submit"><img src="https://s3.amazonaws.com/nyicff_web2014/submit_index1.png" style="border-radius:7px;"></a></td>
+<!--End Change Image URL -->
+
+<!-- Change Image Text Beside Splash Here -->
+						
+<td width="270" style="vertical-align:top;margin-top:50px margin-bottom:10px;">
+
+<p align=right><a href="http://www.gkids.com/membership"><img src="https://s3.amazonaws.com/nyicff_web2014/member_right.png" style="height:255px; border-radius:7px;"></a></p>
+</td>
+</tr>
+</table>
+					
+<?php } else if ($section == "tour" || $section == "jury" || $section == "press" || $section == "workshop" || $section == "getinvolved" || $section == "membership" || $section == "donate"|| $section == "benefit" || $section == "store" || $section == "signup" || $section == "rules" || $section == "hotels"|| $section == "submit"|| $section == "birthday"|| $section == "workshopfilms" || $section == "savethedate" || $section == "surveyprize" || $section == "thankyou"|| $section == "buytickets" || $section == "support" || $section == "buytickets") { ?>
+	<?php include($section.".php"); ?>
+<?php } else { ?>
+	<?php include("comingsoon.php"); ?>
+<?php } ?>
+
+						
+				  </div><!-- end of div.content -->
+					 <!--<div class="bottomCorners">
+						
+		                                </div>
+				<!--</div>--><!-- end of div.contentWrapper -->
+			</div>
+			<?php } ?>
+			<!-- end full right column //-->
+            <!-- middle column //-->
+			<?php if ($section == "home" || $section =="submit" || $section == "about" || $section == "sponsors") { ?>
+				<div id="festivalNews" style="float:left; margin-left:4px; width:<?php if ($section == "home") { ?>740px<?php } else { ?>470px<?php } ?>;">
+					<div class="contentWrapper" style="border-radius:7px; margin-top:0px; background-color:#ffffff; padding-left:5px;"> 
+							
+							<?php if ($section =="submit"  || $section =="about" || $section =="sponsors") { ?>
+								<?php include($section.".php"); ?>
+							<?php } else { ?>
+								<?php include("festivalnews.php"); ?> 
+							<?php } ?>
+							
+							<!--<div class="roundedCornerSpacer">&Acirc;&nbsp;</div>-->
+						</div><!-- end of div.content -->
+						
+					<!--</div>-->
+				</div>
+			<?php } ?>
+            <!-- END middle section //-->
+            <!-- SIDEBAR //-->
+			<?php if ($section == "submit" || $section == "about"  || $section == "sponsors") { ?>
+			
+			<div id="sidebar" style="float:right; margin-right:12px; margin-left:10px;">
+				<div class="contentWrapper" style="margin-top:0px;">
+					<div class="contentBox" style="border-radius:7px; background-color:#ffffff;">
+						<?php if ($section == "submit") { ?>
+						<?php include("entryform.php"); ?>
+						<?php } else if ($section == "about") { ?>
+							<?php include("press2.php"); ?>
+						<?php } else if ($section == "sponsors") { ?>
+							<?php include("becomeasponsor.php"); ?>
+							
+						<?php } else { ?>
+							<?php include("sponsors_mini.php"); ?>
+						<?php } ?>
+						
+						
+					</div><!-- end of div.content -->
+					 
+			</div>
+			<!-- END SIDEBAR //-->
+            <!-- BOTTOM SIDEBAR //-->		
+						
+			<?php } ?>
+			
+			
+		</div>
+</div>
+		<div id="footer">
+<br>
+<?php if ($section == "home") { ?> <?php include("sponsorfooter.php"); ?> <?php } ?>
+<br>
+			<?php include("bottommenu.php"); ?>
+		</div>
+<br>
+	</div>
+    </body>
