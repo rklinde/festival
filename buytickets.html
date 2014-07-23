@@ -1,0 +1,39 @@
+<body>
+	<?php include"schoolslist.php"; ?>
+
+	<div id = "tw-eventlist"> 
+		loading event data&acirc;&iuml;&iquest;&frac12;&brvbar; 
+	</div> 
+	
+	<script type="text/javascript"> 
+		var location_protocol = window.location.protocol.toLowerCase().indexOf("https:")==0?"https":"http"; 
+		var staticServerPath = location_protocol == 'https' ? 'https://a248.e.akamai.net/f/248/15404/24h/i.ticketweb.com' : 'http://i.ticketweb.com'; 
+	</script> 
+	
+	<script type="text/javascript"> 
+		document.write('<script src="'+location_protocol+'://www.ticketweb.com/snl/eventlist/TWEventAPIPlugin.js" type="text/javascript"><\/script>'); 
+		if (typeof jQuery == 'undefined') 
+		{ 
+		document.write('<script src="'+location_protocol+'://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"><\/script>'); 
+		} 
+	</script> 
+	
+	<script type="text/javascript" src="http://www.ticketweb.com/snl/eventlist/TWEventAPIPlugin.js"></script> 
+	
+	<script type="text/javascript"> 
+		if (typeof jQuery == 'undefined') 
+		{ 
+		document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"><\/script>'); 
+		} 
+	</script> 
+	
+	<script type="text/javascript"> 
+		TwEventList.create("tw-eventlist", { 
+		dataUrl:location_protocol+"://api.ticketweb.com/snl/EventAPI.action?key=YS5t6hOMUlxCEoDnFAy4&version=1&orgId=10141&method=json", 
+		showPagination:true,
+		styleCss:staticServerPath+"/snl/eventlist/style.css", 
+		imageServerBaseUrl:staticServerPath,
+		resultsPerPage:10, 
+		}); 
+	</script> 
+</body>
